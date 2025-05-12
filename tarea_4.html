@@ -7,7 +7,7 @@
 </head>
 <body>
     <script type = "text/JavaScript">
-        var contador = 0;
+        var contador = 0; //variable contador que permite controlar cuantas veces se ingresan valores incorrectos.
         do{
             if(contador > 0){
                 alert("Valores ingresados incorrectamente. Intente nuevamente ");
@@ -15,23 +15,23 @@
             var number_1 = Number(prompt("Ingrese el primer número: "));
             var number_2 = Number(prompt("Ingrese el segundo número: "));
             contador = contador + 1;
-        }while(isNaN(number_1) || isNaN(number_2));
+        }while(isNaN(number_1) || isNaN(number_2)); //valida que los valores ingresados sean no numericos y repetira el bucle hasta que el usuario ingrese número en las dos variables. 
         var operacion;
-        for(let i = 0; i < 5; i++){
-            if(i == 0){
+        for(let i = 0; i < 5; i++){ //ciclo for con 5 iteraciones
+            if(i == 0){//primera iteración realiza una suma
                 operacion = number_1 + number_2;
                 alert("La suma de los números es: " + operacion);
             }
-            else if(i == 1){
+            else if(i == 1){//segunda iteración realiza una resta
                 operacion = number_1 - number_2;
                 alert("La resta de los números es: " + operacion);
             }
-            else if(i == 2){
+            else if(i == 2){//tercera iteración realiza una multiplicación
                 operacion = number_1 * number_2;
                 alert("La multiplicación de los números es: " + operacion);
             }
-            else if(i==3){
-                if(number_2 == 0){
+            else if(i==3){//cuarta iteración realiza una división
+                if(number_2 == 0){//Si el segundo número es 0 envia un mensaje y no realiza la división.
                     alert("No se puede realizar la división. ");
                 }else{
                     operacion = number_1 / number_2;
@@ -39,7 +39,7 @@
                 }
             }
             else{
-                if(number_2 == 0){
+                if(number_2 == 0){//Si el segundo número es 0 envia un mensaje y no calcula el residuo.
                     alert("No se puede calcular el residuo. ")
                 }else{
                     operacion = number_1 % number_2;
